@@ -18,12 +18,39 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
         }
         header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            border-radius: 15%;
             margin-bottom: 1rem;
+        }
+        .nav {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            margin-top: 1rem;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        .social-links .square {
+            border-radius: 0;
         }
         .container {
             max-width: 800px;
@@ -32,8 +59,17 @@
         }
         section {
             margin-bottom: 2rem;
+            position: relative;
         }
-        h1, h2, h3 {
+        section:not(:last-of-type) {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            color: #fff;
+        }
+        h2, h3 {
             color: #333;
         }
         .skills {
@@ -64,44 +100,90 @@
 </head>
 <body>
     <header>
+        <div class="nav">
+            <a href="#about">Home</a>
+            <a href="#projects">Projects</a>
+        </div>
         <img src="assets/AIturrios.png" alt="Aldo Iturrios">
         <h1>Aldo Iturrios</h1>
         <p>Data Scientist | Statistics Educator</p>
+        <div class="social-links">
+            <a href="mailto:aiturrios12@gmail.com"><img src="assets/gmail-icon-png.webp" alt="Email" class="square"></a>
+            <a href="https://www.linkedin.com/in/aldoiturrios?trk=profile-badge" target="_blank"><img src="assets/LinkedIn_icon.svg.png" alt="LinkedIn" class="square"></a>
+            <a href="http://github.com/aldoiturrios" target="_blank"><img src="assets/github-icon.png" alt="GitHub"></a>
+        </div>
     </header>
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm Aldo Iturrios, a data scientist working for the US Navy where I leverage data-driven solutions to develop dynamic dashboards and machine learning architectures crucial for the US Navy's capabilities. A Master's in Statistics from the University of Michigan equips me with rigorous analytical skills, enabling me to transform complex datasets into actionable insights.</p>
+            <p>Hello! I'm a data scientist working for the US Navy where I develop machine learning applications and dynamic dashboards that support critical US Navy capabilities.</p>
+            <p>In my free time I love to read books, write fiction, explore nature, and watch countless basketball games (go Warriors)!</p>
+            <p>Feel free to contact me with any questions you may have!</p>
         </section>
         <section id="experience">
-            <h2>Professional Experience</h2>
-            <h3>US NAVY - Data Scientist</h3>
-            <p><strong>2022 - Present</strong></p>
+            <h2>Experience</h2>
+
+            <h3>US Navy | Data Scientist</h3>
+            <p><strong>August 2022 - Present | Ridgecrest, CA</strong></p>
             <ul>
                 <li>Develop dashboards, data preprocessing tools, and visualizations that provide actionable insights to help maintain and improve machine learning architectures used to field critical capabilities across the US Navy.</li>
                 <li>Reduced IT administrative request processing time by 50% through developing dynamic dashboards that integrate data from multiple databases, enhancing transparency and accessibility to key performance metrics.</li>
                 <li>Lead project management efforts by adopting Agile methodology including leading daily stand-up meetings, prioritizing team tasking, and removing obstacles to ensure timely delivery of project milestones.</li>
             </ul>
+
+            <h3><a href="https://www.mathematica.org" target="_blank">Mathematica | Data Analyst</a></h3>
+            <p><strong>January 2019 - August 2020 | Oakland, CA</strong></p>
+            <ul>
+                <li>Independently led data analysis tasks that involved extracting, cleaning, and analyzing large administrative data using tools like SQL, Python, R, and Stata.</li>
+                <li>Compiled and communicated key research findings to various project leads including senior data analysts and project clients such as the Department of Education and Department of Labor.</li>
+                <li>Performed project management duties including tracking financial progress and preparing monthly project assessment memos.</li>
+            </ul>
+
+            <h3><a href="https://www.pandora.com" target="_blank">Pandora | Product Analyst Intern</a></h3>
+            <p><strong>June 2018 - August 2018 | Oakland, CA</strong></p>
+            <ul>
+                <li>Identified product opportunities through analysis of listener behavior and collaboration with cross-functional groups including User Research, Marketing and Engineering.</li>
+                <li>Communicated insights on various product areas such as social, user interface, and player controls across functions and levels of the organization using software such as SQL, Tableau, and Excel.</li>
+                <li>Compiled and presented a detailed analysis on Pandora’s Premium service, focusing on key insights such as subscription growth, churn rate, and listener behavior.</li>
+            </ul>
         </section>
         <section id="education">
             <h2>Education</h2>
-            <h3>Master of Science in Applied Statistics - UNIVERSITY OF MICHIGAN</h3>
-            <p><strong>2022</strong></p>
+
+            <h3>University of Michigan | Master of Science in Applied Statistics</h3>
+            <h4>August 2020 - May 2022</h4>
+            <ul>
+                <li>Coursework: Machine Learning, Design of Experiments, Bayesian Inference, Statistical Computing</li>
+                <li>Awards: Outstanding Graduate Student Instructor Teaching Award</li>
+            </ul>
+
+            <h3>University of California, Berkeley | Bachelor of Arts in Political Science</h3>
+            <h4>August 2015 - May 2018</h4>
+            <ul>
+                <li>Coursework: Research and Quantitative Methods, Programming Fundamentals, Data Structures</li>
+            </ul>
         </section>
+        <!-- <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Project 1: Description</li>
+                <li>Project 2: Description</li>
+                <li>Project 3: Description</li>
+            </ul>
+        </section> -->
         <section id="skills">
             <h2>Skills</h2>
             <div class="skills">
-                <span class="skill">Data Analysis</span>
-                <span class="skill">Public Policy</span>
-                <span class="skill">Statistics</span>
                 <span class="skill">Python</span>
-                <span class="skill">R</span>
+                <span class="skill">Statistics</span>
+                <span class="skill">Machine Learning</span>
                 <span class="skill">SQL</span>
+                <span class="skill">R</span>
             </div>
         </section>
-    </div>
+    </div>        
     <footer>
-        <p>&copy; 2025 Your Name | <a href="https://github.com/yourusername">GitHub</a></p>
+        <p>&copy; 2025 Aldo Iturrios | <a href="https://github.com/aldoiturrios">GitHub</a></p>
     </footer>
 </body>
 </html>
